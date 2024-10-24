@@ -225,11 +225,103 @@ footer ul li a {
 footer ul li a:hover {
     color: #a2c4c9;
 }
-
+main {
+    overflow: hidden;
+}
 /** Overs */
 main button:hover {
     opacity: .8;
 }
+/* Contenedor del carrusel */
+#discos {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    gap: 1em; 
+    padding: 1em;
+    width: 100%; 
+    max-width: 100vw; 
+    box-sizing: border-box; 
+}
+
+/* Scroll suave para una mejor experiencia */
+#discos::-webkit-scrollbar {
+    height: 8px;
+}
+
+#discos::-webkit-scrollbar-thumb {
+    background-color: #2977a4;
+    border-radius: 10px;
+}
+
+#discos::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    scroll-snap-align: start; 
+    min-width: 28em; 
+    max-width: 28rem;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    margin: 0 0.5em; 
+}
+
+/* Mantén el resto de los estilos de la tarjeta igual */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-title {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+    color: #2977a4;
+}
+
+.card-text {
+    font-size: 1.8em;
+    color: #555;
+}
+.cancionLarga{
+    color: red !important;
+}
+
+.list-group {
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    padding: 0.75em 1.25em;
+    margin: 0;
+    font-size: 1.8em;
+    color: #1A4A5E;
+}
+
+.card-body .card-link {
+    font-size: 1.8em;
+    color: #2977a4;
+    text-decoration: none;
+}
+
+.card-body .card-link:hover {
+    text-decoration: underline;
+    color: #134F5C;
+}
+
 
 /**
  * Web
